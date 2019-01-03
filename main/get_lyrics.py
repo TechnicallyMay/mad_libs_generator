@@ -35,4 +35,5 @@ def get_lyrics(link):
 def clean_lyrics(lyrics):
     lyrics = lyrics.split()
     lyrics = [lyric for lyric in lyrics if '[' not in lyric and ']' not in lyric]
+    lyrics = [lyric for lyric in lyrics if '(' not in lyric and ')' not in lyric]
     return " ".join(lyrics)
