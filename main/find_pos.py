@@ -29,6 +29,6 @@ def sort_by_pos(tokens):
     parts_of_speech = defaultdict(list)
     punct = string.punctuation
     for word, tag in tokens:
-        if len(word) > 2 and word not in parts_of_speech[tag]:
+        if len(word) > 2:
             parts_of_speech[tag].append(word)
     return parts_of_speech
