@@ -57,7 +57,7 @@ class MadLibs():
 
     def print(self):
         for word in self.text.split():
-            if word[0].isupper():
+            if word[0].isupper() and word != "I" and word != "I'm":
                 print('\n' + word, end = " ")
             else:
                 print(word, end = " ")
