@@ -5,10 +5,16 @@ from collections import defaultdict
 
 class MadLibs():
 
-    def __init__(self, text):
-        self.text = text
-        tagged_text = find_pos.tag_pos(text)
+    def __init__(self, file_name):
+        self.file_name = "../data/" + file_name + ".txt"
+        self.text = self.get_text()
+        tagged_text = find_pos.tag_pos(self.text)
         self.pos = self.find_important_pos(tagged_text)
+
+
+    def get_text(self):
+        with open(self.file_name, 'r') as f:
+            return  f.read().replace("\n", " ")
 
 
     def find_important_pos(self, tagged):
