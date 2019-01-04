@@ -20,8 +20,10 @@ class MadLibs():
                 key = "Plural Noun"
             elif tag == "NNP" or tag == "NNPS":
                 key = "Proper Noun"
+            elif tag == "VBD" or tag == "VBN":
+                key = "Past Verb"
             elif tag[0] == "V":
-                key = "Verb"
+                key = "Present Verb"
             elif tag[0] == "J":
                 key = "Adjective"
             else:
